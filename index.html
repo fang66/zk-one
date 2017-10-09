@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //编写一段数组去重代码要求至少使用两种方法
+    //方法一
+    var arr=[1,5,4,1,5,8,7,8,9,5,2];
+    function rmNum(arr){
+        var arr1=[];
+        for(var i=0;i<arr.length;i++){
+            if(arr1.indexOf(arr[i])==-1){
+                arr1.push(arr[i]);
+            }
+        }
+        return arr1;
+    }
+    console.log(rmNum(arr));
+    //方法二
+    var arr2=[1,5,4,1,5,8,7,8,9,5,2];
+    function reNum(arr){
+        var arr1=[];
+        for(var j=arr.length-1;j>=0;j--){
+            if(arr1.indexOf(arr[j])==-1){
+                arr1.unshift(arr[j]);
+            }
+        }
+        return arr1;
+    }
+    console.log(reNum(arr2));
+</script>
+</body>
+</html>
